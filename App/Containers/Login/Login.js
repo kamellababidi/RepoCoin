@@ -6,18 +6,50 @@ import ExampleActions from 'App/Stores/Example/Actions'
 import { liveInEurope } from 'App/Stores/Example/Selectors'
 import Style from './LoginStyle'
 import { Images } from 'App/Theme'
+import LinearGradient from 'react-native-linear-gradient';
+import { TextField } from 'react-native-material-textfield';
 
 
 class Login extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      userName: '',
+      password: ''
+    }
+  }
+
   componentDidMount() {
     // this.props.fetchUser()
   }
 
   render() {
     return (
-      <View style={Style.container}>
-      
-      </View>
+      <LinearGradient colors={['#3656c3', '#3598fb']} style={Style.container}>
+        <View style={Style.logoContainer}>
+          <Image style={Style.logo} source={Images.logo} resizeMode={'contain'} />
+        </View>
+        <View style={Style.loginContainer}>
+          <Text style={Style.loginText}>Login</Text>
+          <Image style={Style.coin} source={Images.coin} resizeMode={'contain'} />
+          <View style={Style.textField}>
+            <TextField
+              label='User Name'
+              tintColor='#3598fb'
+              baseColor='#86929d'
+              value={this.state.userName}
+              onChangeText={ (userName) => this.setState({ userName }) }
+            />
+            <TextField
+              label='Password'
+              tintColor='#3598fb'
+              baseColor='#86929d'
+              value={this.state.password}
+              onChangeText={ (password) => this.setState({ password }) }
+            />
+          </View>
+        </View>
+      </LinearGradient>
     )
   }
 }
