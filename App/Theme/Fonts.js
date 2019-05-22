@@ -21,6 +21,12 @@ const style = {
   normal: {
     fontSize: size.regular,
   },
+  small: {
+    fontSize: size.small,
+  },
+  medium: {
+    fontSize: size.input
+  }
 }
 
 export default {

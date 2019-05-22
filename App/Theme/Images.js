@@ -5,4 +5,5 @@
 export default {
   logo: require('App/Images/Logo.png'),
   coin: require('App/Images/Coin.gif'),
+  facebook: require('App/Images/facebook.png')
 }

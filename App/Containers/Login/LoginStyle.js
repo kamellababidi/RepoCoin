@@ -38,11 +38,25 @@ export default StyleSheet.create({
   },
   coin: {
     width: '50%',
-    height: '30%',
+    height: '25%',
     marginBottom: 10,
   },
-  textField: {
+  textFieldContainer: {
     width: '75%',
-    marginBottom: 10,
+  },
+  forgetPasswordText: {
+    ...Fonts.style.small,
+    color: '#4a90e2',
+    margin: 15,
+  },
+  orText: {
+    ...Fonts.style.medium,
+    color: '#9b9b9b',
+    margin: 15
+  },
+  socialMediaContainer: {
+    width: '63%',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   }
 })

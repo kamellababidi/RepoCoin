@@ -8,6 +8,8 @@ import Style from './LoginStyle'
 import { Images } from 'App/Theme'
 import LinearGradient from 'react-native-linear-gradient';
 import { TextField } from 'react-native-material-textfield';
+import RoundedButton from 'App/Components/RoundedButton/RoundedButton'
+import RoundedButtonWithImage from 'App/Components/RoundedButtonWithImage/RoundedButtonWithImage'
 
 
 class Login extends React.Component {
@@ -32,7 +34,7 @@ class Login extends React.Component {
         <View style={Style.loginContainer}>
           <Text style={Style.loginText}>Login</Text>
           <Image style={Style.coin} source={Images.coin} resizeMode={'contain'} />
-          <View style={Style.textField}>
+          <View style={Style.textFieldContainer}>
             <TextField
               label='User Name'
               tintColor='#3598fb'
@@ -44,8 +46,33 @@ class Login extends React.Component {
               label='Password'
               tintColor='#3598fb'
               baseColor='#86929d'
+              secureTextEntry={true}
               value={this.state.password}
               onChangeText={ (password) => this.setState({ password }) }
+            />
+          </View>
+          <Text style={Style.forgetPasswordText}>Forget Password?</Text>
+          <RoundedButton
+            width={'75%'}
+            height={61}
+            text={'SINGN IN'}
+          />
+          <Text style={Style.orText}>or</Text>
+          <View style={Style.socialMediaContainer}>
+            <RoundedButtonWithImage 
+              width={60}
+              height={60}
+              source={Images.facebook}
+            />
+              <RoundedButtonWithImage 
+              width={60}
+              height={60}
+              source={Images.facebook}
+            />
+              <RoundedButtonWithImage 
+              width={60}
+              height={60}
+              source={Images.facebook}
             />
           </View>
         </View>
