@@ -10,6 +10,7 @@ export default class SplashScreen extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      logoFade: 0,
       w: 50,
       h: 50,
       sniperW: 50,
@@ -19,15 +20,31 @@ export default class SplashScreen extends React.Component {
     }
   }
 
+  componentWillMount() {
+    this._logoVisibility = new Animated.Value(this.state.logoFade);
+  }
+
   componentDidMount() {
     const { navigate } = this.props.navigation;
+    // Fade in logo
+    this.setState({
+      logoFade: 1
+    })
     // // splashScreen time is 5 sec
-    // setTimeout(() => {
-    //   navigate('Login')
-    //   clearInterval(this._interval);
-    // }, 5000)
+    this.timeOut = setTimeout(() => {
+      clearInterval(this._interval);
+      clearTimeout(this.timeOut);
+      navigate('Login');
+    }, 6000)
+    
+    // setting fade timout
+    Animated.timing(this._logoVisibility, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true,      
+    }).start()
 
-    // // enlarg logo every 0.5 sec
+    // enlarg logo every 0.5 sec
     this._interval = setInterval(() => {
       if (this.state.w < 150)
         this.enLarg()
@@ -36,6 +53,7 @@ export default class SplashScreen extends React.Component {
 
   componentWillUnmount() {
     clearInterval(this._interval);
+    clearTimeout(this.timeOut)
   }
 
   enLarg() {
@@ -50,31 +68,15 @@ export default class SplashScreen extends React.Component {
     })
   }
 
-  routate() {
-    spinValue = new Animated.Value(0)
-    Animated.timing(
-      this.spinValue,
-      {
-        toValue: 1,
-        duration: 3000,
-        easing: Easing.linear
-      }
-    ).start()
-  }
-
   render() {
-    // const spin = this.spinValue.interpolate({
-    //   inputRange: [0, 1],
-    //   outputRange: ['0deg', '360deg']
-    // })
     return (
       <ImageBackground source={Images.background} style={styles.container}>
-        <View style={{width: this.state.w, height: this.state.h}}>
+        <Animated.View style={[ {width: this.state.w, height: this.state.h, opacity: this._logoVisibility}]}>
           <Image style={[styles.spiner, {width: this.state.sniperW, height: this.state.sniperH}]} source={Images.sniper} resizeMode={'contain'} />
           <View style={styles.rContainer}>
             <Image style={[styles.r ,{width: this.state.rW, height: this.state.rH}]} source={Images.r} resizeMode={'contain'} />
           </View>
-        </View>
+        </Animated.View>
       </ImageBackground>
     )
   }
