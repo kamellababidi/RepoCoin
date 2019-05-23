@@ -39,7 +39,6 @@ export default StyleSheet.create({
   coin: {
     width: '50%',
     height: '25%',
-    marginBottom: 10,
   },
   textFieldContainer: {
     width: '75%',

@@ -62,7 +62,7 @@ class Login extends React.Component {
             <RoundedButtonWithImage 
               width={60}
               height={60}
-              source={Images.facebook}
+              source={Images.google}
             />
               <RoundedButtonWithImage 
               width={60}
@@ -72,7 +72,7 @@ class Login extends React.Component {
               <RoundedButtonWithImage 
               width={60}
               height={60}
-              source={Images.facebook}
+              source={Images.instagram}
             />
           </View>
         </View>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native'
 import Style from './RoundedButtonWithImageStyle'
+import { SocialIcon } from 'react-native-elements'
+
 import {
   View,
 } from 'react-native';
