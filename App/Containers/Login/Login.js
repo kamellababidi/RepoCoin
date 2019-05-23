@@ -1,5 +1,5 @@
 import React from 'react'
-import { Platform, Text, View, Button, ActivityIndicator, Image } from 'react-native'
+import { Text, View, TouchableOpacity, Image } from 'react-native'
 import { connect } from 'react-redux'
 import { PropTypes } from 'prop-types'
 import ExampleActions from 'App/Stores/Example/Actions'
@@ -51,7 +51,9 @@ class Login extends React.Component {
               onChangeText={ (password) => this.setState({ password }) }
             />
           </View>
-          <Text style={Style.forgetPasswordText}>Forget Password?</Text>
+          <TouchableOpacity>
+            <Text style={Style.forgetPasswordText}>Forget Password?</Text>
+          </TouchableOpacity>
           <RoundedButton
             width={'75%'}
             height={61}
@@ -74,6 +76,12 @@ class Login extends React.Component {
               height={60}
               source={Images.instagram}
             />
+          </View>
+          <View style={Style.signUpContainer}>
+            <Text style={Style.accountText}>Don't Have an Account?   </Text>
+            <TouchableOpacity>
+              <Text style={Style.signUpText}>Sign up now </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </LinearGradient>

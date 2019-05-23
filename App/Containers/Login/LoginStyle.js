@@ -24,7 +24,7 @@ export default StyleSheet.create({
   },
   loginContainer: {
     width: '90%',
-    height: '75%',
+    height: '77%',
     alignSelf: 'center',
     alignItems: 'center',
     backgroundColor: '#ffffff',
@@ -56,6 +56,19 @@ export default StyleSheet.create({
   socialMediaContainer: {
     width: '63%',
     flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+    marginBottom: 20
+  },
+  signUpContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  accountText: {
+    ...Fonts.style.small,
+    color: '#232735',
+  },
+  signUpText: {
+    ...Fonts.style.small,
+    color: '#4a90e2',
+  },
 })

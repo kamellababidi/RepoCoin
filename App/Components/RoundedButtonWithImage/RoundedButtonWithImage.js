@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native'
+import { Image, TouchableOpacity } from 'react-native'
 import Style from './RoundedButtonWithImageStyle'
 import { SocialIcon } from 'react-native-elements'
 
@@ -11,9 +11,9 @@ import {
 export default class RoundedButtonWithImage extends Component {
     render() {
         return (
-            <View style={[ Style.container ,{ width: this.props.width, height: this.props.height } ]}>
+            <TouchableOpacity style={[ Style.container ,{ width: this.props.width, height: this.props.height } ]}>
                 <Image style={Style.image} source={this.props.source} resizeMode={'contain'} />
-            </View>
+            </TouchableOpacity>
         )
     }
 }
