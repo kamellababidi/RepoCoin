@@ -8,4 +8,5 @@ export default {
   facebook: require('App/Images/facebook.png'),
   google: require('App/Images/google.png'),
   instagram: require('App/Images/instagram.png'),
+  background: require('App/Images/background.png')
 }

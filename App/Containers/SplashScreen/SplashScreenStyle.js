@@ -8,10 +8,9 @@ export default StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.primary,
   },
   logo: {
-    width: '100%',
-    height: '100%',
+    width: '50%',
+    height: '50%',
   },
 })
