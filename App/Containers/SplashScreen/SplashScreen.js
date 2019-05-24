@@ -11,6 +11,7 @@ export default class SplashScreen extends React.Component {
     super(props)
     this.state = {
       logoFade: 0,
+      spinSpiner: 0,
       w: 25,
       h: 25,
       sniperW: 25,
@@ -22,6 +23,7 @@ export default class SplashScreen extends React.Component {
 
   componentWillMount() {
     this._logoVisibility = new Animated.Value(this.state.logoFade);
+    this.spinSpiner = new Animated.Value(this.state.spinSpiner);
   }
 
   componentDidMount() {
@@ -39,6 +41,13 @@ export default class SplashScreen extends React.Component {
     
     // setting fade timout
     Animated.timing(this._logoVisibility, {
+      toValue: 1,
+      duration: 500,
+      useNativeDriver: true,      
+    }).start()
+
+    // setting spin timout
+    Animated.timing(this.spinSpiner, {
       toValue: 1,
       duration: 500,
       useNativeDriver: true,      
@@ -70,10 +79,14 @@ export default class SplashScreen extends React.Component {
   }
 
   render() {
+    const spin = this.spinSpiner.interpolate({
+      inputRange: [0, 1],
+      outputRange: ['360deg', '0deg']
+    })
     return (
       <ImageBackground source={Images.background} style={styles.container}>
         <Animated.View style={[ {width: this.state.w, height: this.state.h, opacity: this._logoVisibility}]}>
-          <Image style={[styles.spiner, {width: this.state.sniperW, height: this.state.sniperH}]} source={Images.sniper} resizeMode={'contain'} />
+          <Animated.Image style={[styles.spiner, {width: this.state.sniperW, height: this.state.sniperH, transform: [{rotate: spin}]}]} source={Images.sniper} resizeMode={'contain'} />
           <View style={styles.rContainer}>
             <Image style={[styles.r ,{width: this.state.rW, height: this.state.rH}]} source={Images.r} resizeMode={'contain'} />
           </View>
