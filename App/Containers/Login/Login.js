@@ -25,6 +25,10 @@ class Login extends React.Component {
     // this.props.fetchUser()
   }
 
+  signIn = () => {
+    this.props.navigation.navigate('TabNavigator')
+  }
+
   render() {
     return (
       <LinearGradient colors={['#3656c3', '#3598fb']} style={Style.container}>
@@ -58,6 +62,7 @@ class Login extends React.Component {
             width={'75%'}
             height={61}
             text={'SINGN IN'}
+            onPress={this.signIn}
           />
           <Text style={Style.orText}>or</Text>
           <View style={Style.socialMediaContainer}>

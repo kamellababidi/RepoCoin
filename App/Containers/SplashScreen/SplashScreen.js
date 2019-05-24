@@ -37,19 +37,20 @@ export default class SplashScreen extends React.Component {
       clearInterval(this._interval);
       clearTimeout(this.timeOut);
       navigate('Login');
-    }, 6000)
+    }, 5000)
     
+    // LayoutAnimation.spring();
     // setting fade timout
     Animated.timing(this._logoVisibility, {
       toValue: 1,
-      duration: 500,
+      duration: 4000,
       useNativeDriver: true,      
     }).start()
 
     // setting spin timout
     Animated.timing(this.spinSpiner, {
       toValue: 1,
-      duration: 500,
+      duration: 4000,
       useNativeDriver: true,      
     }).start()
 

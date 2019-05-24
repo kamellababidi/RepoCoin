@@ -10,5 +10,7 @@ export default {
   instagram: require('App/Images/instagram.png'),
   background: require('App/Images/background.png'),
   sniper: require('App/Images/Sniper.png'),
-  r: require('App/Images/R.png')
+  r: require('App/Images/R.png'),
+  profileBackground: require('App/Images/profileBackground.png'),
+  levelBackground: require('App/Images/levelBackground.png'),
 }
