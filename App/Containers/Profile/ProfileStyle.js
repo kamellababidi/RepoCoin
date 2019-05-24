@@ -49,5 +49,23 @@ export default StyleSheet.create({
   completedText: {
     ...Fonts.style.medium,
     color: '#ffff'
+  },
+  counterContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    height: '40%',
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  counter: {
+    width: '50%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  discText: {
+      ...Fonts.style.medium,
+      color: '#000000',
+      marginTop: 5
   }
 })

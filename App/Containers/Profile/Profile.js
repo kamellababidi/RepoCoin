@@ -7,6 +7,7 @@ import { liveInEurope } from 'App/Stores/Example/Selectors'
 import Style from './ProfileStyle'
 import { Images } from 'App/Theme'
 import ProfileHeader from 'App/Components/ProfileHeader/ProfileHeader'
+import AnimatedNumber from 'App/Components/AnimatedNumber/AnimatedNumber'
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 
@@ -38,6 +39,23 @@ class Profile extends React.Component {
                 <Text style={Style.completedText}>Completed</Text>
             </View>
         </View>
+        <View style={Style.counterContainer}>
+            <View style={Style.counter}>
+                <AnimatedNumber
+                    start={0}
+                    end={285}
+                />
+                <Text style={Style.discText}>Repo Points</Text>
+            </View>
+            <View style={Style.counter}>
+                <AnimatedNumber
+                    start={0}
+                    end={68}
+                />
+                <Text style={Style.discText}>Scanned Cars Today</Text>
+            </View>
+        </View>
+     
         <View style={Style.levelContainer} source={Images.levelBackground}>
             <Image style={Style.levelImage} source={Images.levelBackground} resizeMode={'contain'} />
         </View>
