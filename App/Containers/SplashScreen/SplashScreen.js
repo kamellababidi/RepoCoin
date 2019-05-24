@@ -11,12 +11,12 @@ export default class SplashScreen extends React.Component {
     super(props)
     this.state = {
       logoFade: 0,
-      w: 50,
-      h: 50,
-      sniperW: 50,
-      sniperH: 50,
-      rW: 25,
-      rH: 25,
+      w: 25,
+      h: 25,
+      sniperW: 25,
+      sniperH: 25,
+      rW: 12.5,
+      rH: 12.5,
     }
   }
 
@@ -58,13 +58,14 @@ export default class SplashScreen extends React.Component {
 
   enLarg() {
     LayoutAnimation.spring();
+    let enlargFactor = 25
     this.setState({
-      w: this.state.w += 25,
-      h: this.state.h += 25,
-      sniperW: this.state.sniperW += 25,
-      sniperH: this.state.sniperH += 25,
-      rW: this.state.rW += 12.5,
-      rH: this.state.rH += 12.5,
+      w: this.state.w += enlargFactor,
+      h: this.state.h += enlargFactor,
+      sniperW: this.state.sniperW += enlargFactor,
+      sniperH: this.state.sniperH += enlargFactor,
+      rW: this.state.rW += enlargFactor / 2,
+      rH: this.state.rH += enlargFactor / 2,
     })
   }
 
