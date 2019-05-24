@@ -12,7 +12,7 @@ const TabNavigator = createBottomTabNavigator({
         navigationOptions: {
             tabBarLabel: "Score",
             tabBarIcon: ({ tintColor }) => (
-                <Icon name="trophy" selectedIconName="ios-home" size={25} color="#3598fb" />
+                <Icon name="trophy" size={25} color="#3598fb" />
             )
         }
     },

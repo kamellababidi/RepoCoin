@@ -11,7 +11,7 @@ export default StyleSheet.create({
       position: 'absolute',
       left: '5%',
       right: 0,
-      bottom: 278,
+      bottom: 236,
       width: '90%',
       height: 79,
       justifyContent: 'center',

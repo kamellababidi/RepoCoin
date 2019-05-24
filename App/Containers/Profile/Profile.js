@@ -6,6 +6,7 @@ import ExampleActions from 'App/Stores/Example/Actions'
 import { liveInEurope } from 'App/Stores/Example/Selectors'
 import Style from './ProfileStyle'
 import { Images } from 'App/Theme'
+import ProfileHeader from 'App/Components/ProfileHeader/ProfileHeader'
 
 
 class Profile extends React.Component {
@@ -16,9 +17,9 @@ class Profile extends React.Component {
   render() {
     return (
       <ImageBackground style={Style.container} source={Images.profileBackground}>
+        <ProfileHeader/>
         <View style={Style.levelContainer} source={Images.levelBackground}>
             <Image style={Style.levelImage} source={Images.levelBackground} resizeMode={'contain'} />
-
         </View>
       </ImageBackground>
     )

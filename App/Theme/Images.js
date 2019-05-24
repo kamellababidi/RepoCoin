@@ -13,4 +13,5 @@ export default {
   r: require('App/Images/R.png'),
   profileBackground: require('App/Images/profileBackground.png'),
   levelBackground: require('App/Images/levelBackground.png'),
+  profile: require('App/Images/Profile.png'),
 }
