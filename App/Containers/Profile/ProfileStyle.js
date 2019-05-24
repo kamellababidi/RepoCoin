@@ -29,5 +29,25 @@ export default StyleSheet.create({
   levelImage: {
       width: 900,
       height: '100%'
+  },
+  prgressBarContainer: {
+      height: '40%',
+      width: '100%',
+      justifyContent: 'center',
+      alignItems: 'center',
+  },
+  insideCircle: {
+      position: 'absolute',
+      justifyContent: 'center',
+      alignItems: 'center',
+  },
+  percintageText: {
+        ...Fonts.style.h1,
+        fontWeight: 'bold',
+        color: '#ffff'
+  },
+  completedText: {
+    ...Fonts.style.medium,
+    color: '#ffff'
   }
 })

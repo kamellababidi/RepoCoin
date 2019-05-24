@@ -7,17 +7,37 @@ import { liveInEurope } from 'App/Stores/Example/Selectors'
 import Style from './ProfileStyle'
 import { Images } from 'App/Theme'
 import ProfileHeader from 'App/Components/ProfileHeader/ProfileHeader'
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 
 class Profile extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+        completed: 72
+    }
   }
 
   render() {
     return (
       <ImageBackground style={Style.container} source={Images.profileBackground}>
         <ProfileHeader/>
+        <View style={Style.prgressBarContainer}>
+            <AnimatedCircularProgress
+                size={165}
+                width={10}
+                fill={this.state.completed}
+                tintColor="#fa9d44"
+                onAnimationComplete={() => console.log('onAnimationComplete')}
+                backgroundColor="#90b4ed"
+                duration={3000}
+                rotation={-360}
+            />
+            <View style={Style.insideCircle}>
+                <Text style={Style.percintageText}>{this.state.completed}%</Text>
+                <Text style={Style.completedText}>Completed</Text>
+            </View>
+        </View>
         <View style={Style.levelContainer} source={Images.levelBackground}>
             <Image style={Style.levelImage} source={Images.levelBackground} resizeMode={'contain'} />
         </View>
