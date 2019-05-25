@@ -9,10 +9,10 @@ export default StyleSheet.create({
   },
   levelContainer: {
       position: 'absolute',
-      left: '5%',
+      left: '10%',
       right: 0,
-      bottom: 236,
-      width: '90%',
+      bottom: '33%',
+      width: '80%',
       height: 79,
       justifyContent: 'center',
       alignItems: 'center',
