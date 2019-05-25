@@ -1,30 +1,26 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import Fonts from 'App/Theme/Fonts'
 import ApplicationStyles from 'App/Theme/ApplicationStyles'
-
+var {height, width} = Dimensions.get('window');
 export default StyleSheet.create({
   container: {
     ...ApplicationStyles.screen.container,
   },
-  text: {
-    ...Fonts.style.normal,
-    textAlign: 'center',
-    marginBottom: 5,
-  },
   logoContainer: {
     width: '100%',
-    height: '15%',
+    height: '14%',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: height / 65
   },
   logo: {
     width: '100%',
-    height: '50%',
-    marginTop: 15
+    height: '60%',
+    marginTop: height / 50
   },
   loginContainer: {
     width: '90%',
-    height: '77%',
+    height: '78%',
     alignSelf: 'center',
     alignItems: 'center',
     backgroundColor: '#ffffff',
@@ -33,7 +29,7 @@ export default StyleSheet.create({
   loginText: {
     ...Fonts.style.normal,
     textAlign: 'center',
-    margin: 15,
+    margin: height / 50,
     color: '#3589ee'
   },
   coin: {
@@ -42,22 +38,24 @@ export default StyleSheet.create({
   },
   textFieldContainer: {
     width: '75%',
+    height: '22%',
   },
   forgetPasswordText: {
     ...Fonts.style.small,
     color: '#4a90e2',
-    margin: 15,
+    margin: height / 50,
   },
   orText: {
     ...Fonts.style.medium,
     color: '#9b9b9b',
-    margin: 15
+    margin: height / 50
   },
   socialMediaContainer: {
     width: '63%',
+    height: '9%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 20
+    marginBottom: height / 40
   },
   signUpContainer: {
     flexDirection: 'row',

@@ -44,6 +44,7 @@ class Login extends React.Component {
               tintColor='#3598fb'
               baseColor='#86929d'
               value={this.state.userName}
+              labelHeight={20}
               onChangeText={ (userName) => this.setState({ userName }) }
             />
             <TextField
@@ -52,6 +53,7 @@ class Login extends React.Component {
               baseColor='#86929d'
               secureTextEntry={true}
               value={this.state.password}
+              labelHeight={20}
               onChangeText={ (password) => this.setState({ password }) }
             />
           </View>
@@ -60,25 +62,25 @@ class Login extends React.Component {
           </TouchableOpacity>
           <RoundedButton
             width={'75%'}
-            height={61}
+            height={'8.5%'}
             text={'SINGN IN'}
             onPress={this.signIn}
           />
           <Text style={Style.orText}>or</Text>
           <View style={Style.socialMediaContainer}>
             <RoundedButtonWithImage 
-              width={60}
-              height={60}
+              width={'25%'}
+              height={'100%'}
               source={Images.google}
             />
-              <RoundedButtonWithImage 
-              width={60}
-              height={60}
+            <RoundedButtonWithImage 
+               width={'25%'}
+               height={'100%'}
               source={Images.facebook}
             />
-              <RoundedButtonWithImage 
-              width={60}
-              height={60}
+            <RoundedButtonWithImage 
+               width={'25%'}
+               height={'100%'}
               source={Images.instagram}
             />
           </View>
