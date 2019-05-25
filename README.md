@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="App/Images/Logo.png" alt="Logo" width="100%">
+    <img src="App/Images/Logo.png" alt="Logo" width="100%" style="background-color:blue;">
 </div>
 
 
