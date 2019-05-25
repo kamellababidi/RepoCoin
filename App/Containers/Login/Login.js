@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, TouchableOpacity, Image } from 'react-native'
+import { Text, View, TouchableOpacity, Image, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import { PropTypes } from 'prop-types'
 import ExampleActions from 'App/Stores/Example/Actions'
@@ -32,65 +32,67 @@ class Login extends React.Component {
   render() {
     return (
       <LinearGradient colors={['#3656c3', '#3598fb']} style={Style.container}>
-        <View style={Style.logoContainer}>
-          <Image style={Style.logo} source={Images.logo} resizeMode={'contain'} />
-        </View>
-        <View style={Style.loginContainer}>
-          <Text style={Style.loginText}>Login</Text>
-          <Image style={Style.coin} source={Images.coin} resizeMode={'contain'} />
-          <View style={Style.textFieldContainer}>
-            <TextField
-              label='User Name'
-              tintColor='#3598fb'
-              baseColor='#86929d'
-              value={this.state.userName}
-              labelHeight={20}
-              onChangeText={ (userName) => this.setState({ userName }) }
-            />
-            <TextField
-              label='Password'
-              tintColor='#3598fb'
-              baseColor='#86929d'
-              secureTextEntry={true}
-              value={this.state.password}
-              labelHeight={20}
-              onChangeText={ (password) => this.setState({ password }) }
-            />
+        <ScrollView keyboardShouldPersistTaps='always'>
+          <View style={Style.logoContainer}>
+            <Image style={Style.logo} source={Images.logo} resizeMode={'contain'} />
           </View>
-          <TouchableOpacity>
-            <Text style={Style.forgetPasswordText}>Forget Password?</Text>
-          </TouchableOpacity>
-          <RoundedButton
-            width={'75%'}
-            height={'8.5%'}
-            text={'SINGN IN'}
-            onPress={this.signIn}
-          />
-          <Text style={Style.orText}>or</Text>
-          <View style={Style.socialMediaContainer}>
-            <RoundedButtonWithImage 
-              width={'26%'}
-              height={'100%'}
-              source={Images.google}
-            />
-            <RoundedButtonWithImage 
-               width={'26%'}
-               height={'100%'}
-              source={Images.facebook}
-            />
-            <RoundedButtonWithImage 
-               width={'26%'}
-               height={'100%'}
-              source={Images.instagram}
-            />
-          </View>
-          <View style={Style.signUpContainer}>
-            <Text style={Style.accountText}>Don't Have an Account?   </Text>
+          <View style={Style.loginContainer}>
+            <Text style={Style.loginText}>Login</Text>
+            <Image style={Style.coin} source={Images.coin} resizeMode={'contain'} />
+            <View style={Style.textFieldContainer}>
+              <TextField
+                label='User Name'
+                tintColor='#3598fb'
+                baseColor='#86929d'
+                value={this.state.userName}
+                labelHeight={20}
+                onChangeText={ (userName) => this.setState({ userName }) }
+              />
+              <TextField
+                label='Password'
+                tintColor='#3598fb'
+                baseColor='#86929d'
+                secureTextEntry={true}
+                value={this.state.password}
+                labelHeight={20}
+                onChangeText={ (password) => this.setState({ password }) }
+              />
+            </View>
             <TouchableOpacity>
-              <Text style={Style.signUpText}>Sign up now </Text>
+              <Text style={Style.forgetPasswordText}>Forget Password?</Text>
             </TouchableOpacity>
+            <RoundedButton
+              width={'75%'}
+              height={'8.5%'}
+              text={'SINGN IN'}
+              onPress={this.signIn}
+            />
+            <Text style={Style.orText}>or</Text>
+            <View style={Style.socialMediaContainer}>
+              <RoundedButtonWithImage 
+                width={'26%'}
+                height={'100%'}
+                source={Images.google}
+              />
+              <RoundedButtonWithImage 
+                width={'26%'}
+                height={'100%'}
+                source={Images.facebook}
+              />
+              <RoundedButtonWithImage 
+                width={'26%'}
+                height={'100%'}
+                source={Images.instagram}
+              />
+            </View>
+            <View style={Style.signUpContainer}>
+              <Text style={Style.accountText}>Don't Have an Account?   </Text>
+              <TouchableOpacity>
+                <Text style={Style.signUpText}>Sign up now </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
+        </ScrollView>
       </LinearGradient>
     )
   }

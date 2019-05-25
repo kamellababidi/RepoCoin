@@ -8,23 +8,24 @@ export default StyleSheet.create({
   },
   logoContainer: {
     width: '100%',
-    height: '14%',
+    height: height / 9.5,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: height / 65
+    marginTop: height / 80,
+    marginBottom: height / 70
   },
   logo: {
     width: '100%',
-    height: '60%',
+    height: '70%',
     marginTop: height / 50
   },
   loginContainer: {
     width: '90%',
-    height: '78%',
+    height: height / 1.25,
     alignSelf: 'center',
     alignItems: 'center',
     backgroundColor: '#ffffff',
-    borderRadius: 10
+    borderRadius: 10,
   },
   loginText: {
     ...Fonts.style.normal,

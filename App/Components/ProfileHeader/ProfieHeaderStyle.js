@@ -1,6 +1,7 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 import Fonts from 'App/Theme/Fonts'
 import ApplicationStyles from 'App/Theme/ApplicationStyles'
+var {height, width} = Dimensions.get('window');
 
 export default StyleSheet.create({
     container: {
@@ -11,11 +12,12 @@ export default StyleSheet.create({
     topStyle: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom: 10
+        marginBottom: 10,
+        marginTop: height / 70
     },
     profileImage: {
         width: 65,
-        height: 65
+        height: 65,
     },
     userName: {
         ...Fonts.style.medium,
