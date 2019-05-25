@@ -1,6 +1,7 @@
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet, Dimensions, Platform } from 'react-native'
 import Fonts from 'App/Theme/Fonts'
 import ApplicationStyles from 'App/Theme/ApplicationStyles'
+
 var {height, width} = Dimensions.get('window');
 export default StyleSheet.create({
   container: {
@@ -17,7 +18,7 @@ export default StyleSheet.create({
   logo: {
     width: '100%',
     height: '70%',
-    marginTop: height / 50
+    marginTop: Platform.OS === 'android' ? height / 50 : height / 30
   },
   loginContainer: {
     width: '90%',

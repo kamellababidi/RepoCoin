@@ -15,6 +15,7 @@ export default StyleSheet.create({
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.8,
         shadowRadius: 2,
+        elevation: 1
     },
     image: {
         width: '40%',

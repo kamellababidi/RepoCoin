@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, TouchableOpacity, Image, ScrollView } from 'react-native'
+import { Text, View, TouchableOpacity, Image, ScrollView, Dimensions } from 'react-native'
 import { connect } from 'react-redux'
 import { PropTypes } from 'prop-types'
 import ExampleActions from 'App/Stores/Example/Actions'
@@ -10,6 +10,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { TextField } from 'react-native-material-textfield';
 import RoundedButton from 'App/Components/RoundedButton/RoundedButton'
 import RoundedButtonWithImage from 'App/Components/RoundedButtonWithImage/RoundedButtonWithImage'
+var {height, width} = Dimensions.get('window');
 
 
 class Login extends React.Component {
@@ -22,6 +23,7 @@ class Login extends React.Component {
   }
 
   componentDidMount() {
+    console.log(width, "kkkkkkkk")
     // this.props.fetchUser()
   }
 
@@ -70,17 +72,17 @@ class Login extends React.Component {
             <Text style={Style.orText}>or</Text>
             <View style={Style.socialMediaContainer}>
               <RoundedButtonWithImage 
-                width={'26%'}
+                width={width >= 375 ? '26%': '24%' }
                 height={'100%'}
                 source={Images.google}
               />
               <RoundedButtonWithImage 
-                width={'26%'}
+                width={width >= 375 ? '26%': '24%' }
                 height={'100%'}
                 source={Images.facebook}
               />
               <RoundedButtonWithImage 
-                width={'26%'}
+                width={width >= 375 ? '26%': '24%' }
                 height={'100%'}
                 source={Images.instagram}
               />
