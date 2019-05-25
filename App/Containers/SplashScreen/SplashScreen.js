@@ -1,7 +1,8 @@
 import React from 'react'
-import { Text, View, Image, ImageBackground, Animated, NativeModules, LayoutAnimation, StatusBar } from 'react-native'
+import { Text, View, Image, ImageBackground, Animated, NativeModules, LayoutAnimation, StatusBar, Platform } from 'react-native'
 import styles from './SplashScreenStyle'
 import { Images } from 'App/Theme'
+import NativeSplash from 'react-native-splash-screen'
 const { UIManager } = NativeModules;
 
 UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -27,6 +28,8 @@ export default class SplashScreen extends React.Component {
   }
 
   componentDidMount() {
+    if (Platform.OS === 'android')
+      NativeSplash.hide();
     const { navigate } = this.props.navigation;
     // Fade in logo
     this.setState({

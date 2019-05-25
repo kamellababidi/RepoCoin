@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.horcrux.svg.SvgPackage;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
@@ -30,7 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
             new SvgPackage(),
             new VectorIconsPackage(),
             new LinearGradientPackage(),
-            new RNGestureHandlerPackage()
+            new RNGestureHandlerPackage(),
+            new SplashScreenReactPackage()
       );
     }
 
