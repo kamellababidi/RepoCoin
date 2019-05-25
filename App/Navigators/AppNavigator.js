@@ -20,7 +20,7 @@ const StackNavigator = createStackNavigator(
     Profile: {screen: Profile},
     // The main application screen is our "ExampleScreen". Feel free to replace it with your
     // own screen and remove the example.
-    MainScreen: TabNavigator,
+    MainScreen: SplashScreen,
   },
   {
     // By default the application will show the splash screen

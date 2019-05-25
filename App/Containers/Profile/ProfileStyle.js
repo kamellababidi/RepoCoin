@@ -27,24 +27,39 @@ export default StyleSheet.create({
       shadowRadius: 2,
   },
   levelImage: {
-      width: 900,
-      height: '100%'
+    width: 900,
+    height: '100%'
+  },
+  levelDescContainer: {
+    position: 'absolute',
+    top: 25,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  levelText: {
+      color: "#373333",
+      fontSize: 22
+  },
+  beginerText: {
+    color: "#3589ee",
+    fontSize: 22
   },
   prgressBarContainer: {
-      height: '40%',
-      width: '100%',
-      justifyContent: 'center',
-      alignItems: 'center',
+    height: '40%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   insideCircle: {
-      position: 'absolute',
-      justifyContent: 'center',
-      alignItems: 'center',
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   percintageText: {
-        ...Fonts.style.h1,
-        fontWeight: 'bold',
-        color: '#ffff'
+    ...Fonts.style.h1,
+    fontWeight: 'bold',
+    color: '#ffff'
   },
   completedText: {
     ...Fonts.style.medium,
@@ -64,8 +79,8 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   discText: {
-      ...Fonts.style.medium,
-      color: '#000000',
-      marginTop: 5
+    ...Fonts.style.medium,
+    color: '#000000',
+    marginTop: 5
   }
 })

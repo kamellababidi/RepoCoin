@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text, View, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import { connect } from 'react-redux'
-import { PropTypes } from 'prop-types'
 import ExampleActions from 'App/Stores/Example/Actions'
 import { liveInEurope } from 'App/Stores/Example/Selectors'
 import Style from './ProfileStyle'
@@ -56,9 +55,13 @@ class Profile extends React.Component {
             </View>
         </View>
      
-        <View style={Style.levelContainer} source={Images.levelBackground}>
+        <ImageBackground style={Style.levelContainer}>
             <Image style={Style.levelImage} source={Images.levelBackground} resizeMode={'contain'} />
-        </View>
+            <View style={Style.levelDescContainer}>
+                <Text style={Style.levelText}>Level : </Text>
+                <Text style={Style.beginerText}>Beginer</Text>
+            </View>
+        </ImageBackground>
       </ImageBackground>
     )
   }
