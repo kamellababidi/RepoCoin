@@ -23,6 +23,7 @@ export default StyleSheet.create({
       shadowOffset: { width: 0, height: 6 },
       shadowOpacity: 0.9,
       shadowRadius: 2,
+      elevation: 1
   },
   levelImage: {
     width: 900,
