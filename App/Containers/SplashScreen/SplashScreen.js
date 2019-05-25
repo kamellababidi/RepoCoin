@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, Image, ImageBackground, Animated, NativeModules, LayoutAnimation, } from 'react-native'
+import { Text, View, Image, ImageBackground, Animated, NativeModules, LayoutAnimation, StatusBar } from 'react-native'
 import styles from './SplashScreenStyle'
 import { Images } from 'App/Theme'
 const { UIManager } = NativeModules;
@@ -86,6 +86,7 @@ export default class SplashScreen extends React.Component {
     })
     return (
       <ImageBackground source={Images.background} style={styles.container}>
+        <StatusBar backgroundColor="#7885f9" barStyle="light-content" />
         <Animated.View style={[ {width: this.state.w, height: this.state.h, opacity: this._logoVisibility}]}>
           <Animated.Image style={[styles.spiner, {width: this.state.sniperW, height: this.state.sniperH, transform: [{rotate: spin}]}]} source={Images.sniper} resizeMode={'contain'} />
           <View style={styles.rContainer}>
