@@ -69,17 +69,17 @@ class Login extends React.Component {
           <Text style={Style.orText}>or</Text>
           <View style={Style.socialMediaContainer}>
             <RoundedButtonWithImage 
-              width={'25%'}
+              width={'26%'}
               height={'100%'}
               source={Images.google}
             />
             <RoundedButtonWithImage 
-               width={'25%'}
+               width={'26%'}
                height={'100%'}
               source={Images.facebook}
             />
             <RoundedButtonWithImage 
-               width={'25%'}
+               width={'26%'}
                height={'100%'}
               source={Images.instagram}
             />
