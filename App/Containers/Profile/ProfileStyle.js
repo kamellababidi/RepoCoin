@@ -50,6 +50,12 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  prgressBar: {
+    position: 'absolute',
+    alignSelf: 'center',
+    justifyContent: 'center'
+
+  },
   insideCircle: {
     position: 'absolute',
     justifyContent: 'center',

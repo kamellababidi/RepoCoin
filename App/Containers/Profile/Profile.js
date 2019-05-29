@@ -24,15 +24,26 @@ class Profile extends React.Component {
         <ProfileHeader/>
         <View style={Style.prgressBarContainer}>
             <AnimatedCircularProgress
-                size={165}
-                width={10}
-                fill={this.state.completed}
-                tintColor="#fa9d44"
-                onAnimationComplete={() => console.log('onAnimationComplete')}
-                backgroundColor="#90b4ed"
-                duration={3000}
-                rotation={-360}
+                    size={170}
+                    width={15}
+                    fill={this.state.completed}
+                    tintColor="rgb(220, 222, 226, 0.2)"
+                    onAnimationComplete={() => console.log('onAnimationComplete')}
+                    duration={3000}
+                    rotation={-360}
             />
+            <View style={Style.prgressBar}>
+                <AnimatedCircularProgress
+                    size={165}
+                    width={10}
+                    fill={this.state.completed}
+                    tintColor="#fa9d44"
+                    onAnimationComplete={() => console.log('onAnimationComplete')}
+                    backgroundColor="#90b4ed"
+                    duration={3000}
+                    rotation={-360}
+                />
+            </View>
             <View style={Style.insideCircle}>
                 <Text style={Style.percintageText}>{this.state.completed}%</Text>
                 <Text style={Style.completedText}>Completed</Text>

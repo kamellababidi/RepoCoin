@@ -9,16 +9,14 @@ import { fadeIn, zoomIn, zoomOut } from 'react-navigation-transitions';
 
 
 const handleCustomTransition = ({ scenes }) => {
-  console.log(scenes, "scenes")
   const prevScene = scenes[scenes.length - 2];
   const nextScene = scenes[scenes.length - 1];
 
   if (prevScene
     && prevScene.route.routeName === 'MainScreen'
     && nextScene.route.routeName === 'Login') {
-    return fadeIn(2000);
+      return fadeIn(2000);
   } 
-
 }
 
 /**
