@@ -77,8 +77,8 @@ export default class SplashScreen extends React.Component {
       h: this.state.h += enlargFactor,
       sniperW: this.state.sniperW += enlargFactor,
       sniperH: this.state.sniperH += enlargFactor,
-      rW: this.state.rW += enlargFactor / 2,
-      rH: this.state.rH += enlargFactor / 2,
+      rW: this.state.rW += enlargFactor / 2.1,
+      rH: this.state.rH += enlargFactor / 2.1,
     })
   }
 
