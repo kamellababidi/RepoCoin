@@ -60,7 +60,7 @@ class Login extends React.Component {
                 onChangeText={ (password) => this.setState({ password }) }
               />
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('ForgetPassword')}>
               <Text style={Style.forgetPasswordText}>Forget Password?</Text>
             </TouchableOpacity>
             <RoundedButton

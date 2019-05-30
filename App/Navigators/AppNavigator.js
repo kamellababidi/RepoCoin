@@ -3,6 +3,7 @@ import { createAppContainer, createStackNavigator } from 'react-navigation'
 import Login from 'App/Containers/Login/Login'
 import TabNavigator from 'App/Containers/TabNavigator/TabNavigator'
 import Profile from 'App/Containers/Profile/Profile'
+import ForgetPassword from 'App/Containers/ForgetPassword/ForgetPassword'
 import SplashScreen from 'App/Containers/SplashScreen/SplashScreen'
 import { fadeIn, zoomIn, zoomOut } from 'react-navigation-transitions';
 
@@ -32,6 +33,7 @@ const StackNavigator = createStackNavigator(
     Login: {screen: Login},
     TabNavigator: {screen: TabNavigator},
     Profile: {screen: Profile},
+    ForgetPassword: {screen: ForgetPassword},
     // The main application screen is our "ExampleScreen". Feel free to replace it with your
     // own screen and remove the example.
     MainScreen: SplashScreen,
